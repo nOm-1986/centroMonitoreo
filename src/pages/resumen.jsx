@@ -1,5 +1,6 @@
-// src/pages/Resumen.jsx
 import { useNavigate } from 'react-router-dom';
+
+import { Button } from '../components/ui/Button';
 
 import bannerImage from '../assets/bannerResumenEstrategia6GW.png';
 import { ComunidadesResumen } from '../components/ComunidadesResumen';
@@ -54,15 +55,12 @@ export default function Resumen() {
                </span>
             </h1>
             <br/>
-            <button 
-              onClick={handleDownload} 
-              className="bg-yellow-400 text-black font-semibold px-4 py-2 rounded-md w-fit hover:bg-yellow-500"
-            >
+            <Button onClick={handleDownload}>
               Descargar resumen
-            </button>
+              </Button>
           </div>
           {/* El ícono grande lo moví al componente hijo si quieres; si no, déjalo */}
-          {/* <img src={GWOff} className="w-24 h-24 flex-shrink-0" />  */}
+          {/* <img src={GWOff} className="w-24 h-24 shrink-0" />  */}
         </div>
       </div>
 

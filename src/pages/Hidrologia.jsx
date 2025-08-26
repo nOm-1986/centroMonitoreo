@@ -1,16 +1,19 @@
-// src/pages/Hidrologia.jsx
-import React, { useMemo, useRef, useState } from 'react';
+import { Button } from "../components/ui/Button";
+
+import { useMemo, useRef, useState } from 'react';
+import { useReactToPrint } from 'react-to-print';
+
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import { useReactToPrint } from 'react-to-print';
 
 // HTML embebidos
 import chart1Html from '../data/Chart1.html?raw';
 import chart2Html from '../data/Chart2.html?raw';
 import chart3Html from '../data/Chart3.html?raw'; // Información general
-import tablaHidrologiaCompleta from '../data/tabla_hidrologia-completa.html?raw'; // Aportes hídricos
-import bannerHidrologia from '../assets/bannerHidrologia.png';
+import tablaHidrologiaCompleta from '../data/tabla_hidrologia-completa.html?raw'; 
 
+// Aportes hídricos
+import bannerHidrologia from '../assets/bannerHidrologia.png';
 import MapaHidrologia from '../components/MapaHidrologia';
 
 // ===== Paleta =====
@@ -426,14 +429,13 @@ export default function Hidrologia() {
           </h1>
 
           <div className="absolute right-4 bottom-3 no-print">
-            <button
+            <Button
               onClick={handlePrint}
-              className="inline-block px-3 py-1.5 rounded-md bg-yellow-400 hover:brightness-95 text-black text-sm font-semibold"
               title="Descargar PDF"
               type="button"
             >
               Descargar PDF
-            </button>
+            </Button>
           </div>
         </div>
 

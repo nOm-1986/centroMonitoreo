@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-/* Iconos SVG  */
+import { Button } from "./ui/Button"
+
 import { HelpCircle } from 'lucide-react'
 import EnergiaElectricaOn from '../assets/svg-icons/EnergiaElectrica-On.svg'
 import AutogeneracionOn from '../assets/svg-icons/Autogeneracion-On.svg'
@@ -10,27 +10,24 @@ export function ComunidadesResumen() {
 
   // Datos de ejemplo para cada tarjeta
   const datosComunidades = [
-    { icon: <img src={EnergiaElectricaOn} alt='Comunidades instaladas' className="w-6 h-6 flex-shrink-0"/>, 
+    { icon: <img src={EnergiaElectricaOn} alt='Comunidades instaladas' className="w-6 h-6 shrink-0"/>, 
       label: 'Comunidades instaladas', number: '---', value: '---', updated: '8/5/2025' },
-    { icon: <img src={OfertaDemandaOn} alt='Comunidades proyectadas' className="w-6 h-6 flex-shrink-0"/>, 
+    { icon: <img src={OfertaDemandaOn} alt='Comunidades proyectadas' className="w-6 h-6 shrink-0"/>, 
       label: 'Comunidades proyectadas', number: '---', value: '---', updated: '8/5/2025' },
   ]
   const datosSolar = [
-    { icon: <img src={AutogeneracionOn} alt='Colombia Solar instalada' className="w-6 h-6 flex-shrink-0"/>, 
+    { icon: <img src={AutogeneracionOn} alt='Colombia Solar instalada' className="w-6 h-6 shrink-0"/>, 
       label: 'Colombia Solar instalada', number: '---', value: '---', updated: '8/5/2025' },
-    { icon: <img src={AutogeneracionOn} alt='Colombia Solar proyectadas' className="w-6 h-6 flex-shrink-0"/>, 
+    { icon: <img src={AutogeneracionOn} alt='Colombia Solar proyectadas' className="w-6 h-6 shrink-0"/>, 
       label: 'Colombia Solar proyectadas', number: '---', value: '---', updated: '8/5/2025' },
   ]
 
   return (
     <div className="px-2 mb-8">
       {!expanded ? (
-        <button
-          onClick={() => setExpanded(true)}
-          className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded transition"
-        >
+        <Button onClick={() => setExpanded(true)}>
           Ver Comunidades energéticas
-        </button>
+        </Button>
       ) : (
         <div className="space-y-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -48,14 +45,16 @@ export function ComunidadesResumen() {
                     >
                       <div className="flex items-center mb-2">
                         {d.icon}
-                        <span className="ml-2 text-[18px] font-normal leading-[26px] text-[#B0B0B0]">{d.label}</span>
+                        <span className="ml-2 text-[18px] font-normal leading-[26px] text-[#B0B0B0]">
+                          {d.label}
+                        </span>
                       </div>
-                      <div className='flex justify-between'>
+                      <div className="flex justify-between">
                         <div className="text-white font-bold text-xl">
                           No. {d.number} – {d.value}
                         </div>
                         <HelpCircle
-                          className="text-white cursor-pointer hover:text-gray-300 bg-neutral-700 self-center rounded h-6 w-6 p-1"
+                          className="text-white cursor-pointer hover:text-gray-300 bg-neutral-700 self-center rounded-sm h-6 w-6 p-1"
                           title="Ayuda"
                         />
                       </div>
@@ -63,20 +62,19 @@ export function ComunidadesResumen() {
                         Actualizado el: {d.updated}
                       </div>
                     </div>
-                  )
+                  );
                 })}
               </div>
             </div>
           </div>
 
-          <button
+          <Button
             onClick={() => setExpanded(false)}
-            className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded transition"
           >
             Ver menos
-          </button>
+          </Button>
         </div>
       )}
     </div>
-  )
+  );
 }

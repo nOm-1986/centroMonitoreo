@@ -117,10 +117,10 @@ export function CurvaS({ projectName = 'Proyecto 01' }) {
 
   return (
     <section className="mt-8">
-      <div className="bg-[#262626] p-4 rounded-lg border border-gray-700 shadow relative">
+      <div className="bg-[#262626] p-4 rounded-lg border border-gray-700 shadow-sm relative">
           {/* Botón de ayuda */}
           <button
-            className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow hover:bg-[#666] transition-colors"
+            className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow-sm hover:bg-[#666] transition-colors"
             style={{ width: 30, height: 30 }}
             title="Ayuda"
             onClick={() => alert('Ok Aquí puedes mostrar ayuda contextual o abrir un modal.')}

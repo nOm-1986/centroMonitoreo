@@ -1,5 +1,5 @@
-// src/components/Banner6GW.jsx
-import React from 'react';
+import { Button } from "./ui/Button";
+
 import PropTypes from 'prop-types';
 import bannerImage from '../assets/bannerEstrategia6GW.png';
 import GWOff from '../assets/svg-icons/6gw+NewIcon.svg'
@@ -19,14 +19,13 @@ export function Banner6GW({ onClick }) {
             Estrategia 6GW+
           </h1>
           <Link to="/6GW+">
-            <button
-              className="bg-[#FFC800] text-black px-5 p-2 rounded-md hover:bg-[#e6b000] transition"
+            <Button
             >
               Consultar
-            </button>
+            </Button>
           </Link>
         </div>
-        <img src={GWOff} className="w-24 h-24 flex-shrink-0 absolute right-6 top-7"/>
+        <img src={GWOff} className="w-24 h-24 shrink-0 absolute right-6 top-7"/>
       
     </div>
   );

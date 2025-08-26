@@ -7,7 +7,7 @@ export default function IndicatorCard({ icon, label, value, updated }) {
     : value;
 
   return (
-    <div className="bg-[#262626] p-5 rounded-lg border border-[#666666] shadow">
+    <div className="bg-[#262626] p-5 rounded-lg border border-[#666666] shadow-sm">
       <div className="flex items-center mb-2">
         {icon}
         <span className="ml-2 text-[18px] font-normal leading-[26px] text-[#B0B0B0]">
@@ -17,7 +17,7 @@ export default function IndicatorCard({ icon, label, value, updated }) {
       <div className="flex text-white text-3xl font-bold">
         {displayValue}
         <HelpCircle
-          className="text-white cursor-pointer hover:text-gray-300 bg-neutral-700 self-center rounded h-6 w-6 p-1 ml-4"
+          className="text-white cursor-pointer hover:text-gray-300 bg-neutral-700 self-center rounded-sm h-6 w-6 p-1 ml-4"
           title="Ayuda"
         />
       </div>

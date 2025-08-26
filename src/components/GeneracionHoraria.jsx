@@ -168,10 +168,10 @@ export function GeneracionHoraria() {
         Curva de generación horaria promedio
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow">
+        <div className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow-sm">
           <HighchartsReact highcharts={Highcharts} options={opts1} />
         </div>
-        <div className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow">
+        <div className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow-sm">
           <HighchartsReact highcharts={Highcharts} options={opts2} />
         </div>
       </div>

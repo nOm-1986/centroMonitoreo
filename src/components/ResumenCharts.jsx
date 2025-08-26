@@ -373,7 +373,7 @@ export function ResumenCharts() {
 
   if (loading) {
     return (
-      <div className="bg-[#262626] p-4 rounded-lg border border-gray-700 shadow flex flex-col items-center justify-center h-[500px]">
+      <div className="bg-[#262626] p-4 rounded-lg border border-gray-700 shadow-sm flex flex-col items-center justify-center h-[500px]">
         <div className="flex space-x-2">
           <div className="w-3 h-3 rounded-full animate-bounce" style={{ backgroundColor: 'rgba(255,200,0,1)', animationDelay: '0s' }}></div>
           <div className="w-3 h-3 rounded-full animate-bounce" style={{ backgroundColor: 'rgba(255,200,0,1)', animationDelay: '0.2s' }}></div>
@@ -386,12 +386,12 @@ export function ResumenCharts() {
 
   if (error) {
     return (
-      <div className="bg-[#262626] p-4 rounded-lg border shadow flex flex-col items-center justify-center h-[500px]">
+      <div className="bg-[#262626] p-4 rounded-lg border shadow-sm flex flex-col items-center justify-center h-[500px]">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-red-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <p className="text-red-500 text-center max-w-md">{error}</p>
-        <button onClick={() => window.location.reload()} className="mt-4 px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 transition-colors">
+        <button onClick={() => window.location.reload()} className="mt-4 px-4 py-2 bg-blue-600 rounded-sm hover:bg-blue-700 transition-colors">
           Reintentar
         </button>
       </div>
@@ -407,9 +407,9 @@ export function ResumenCharts() {
     <section className="mt-8">
       <div className={`grid ${gridClasses} gap-4`}>
         {displayed.map(({ opt, idx }) => (
-          <div key={idx} className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow relative">
+          <div key={idx} className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow-sm relative">
             <button
-              className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow hover:bg-[#666] transition-colors"
+              className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow-sm hover:bg-[#666] transition-colors"
               style={{ width: 30, height: 30 }}
               title="Ayuda"
               onClick={() => {

@@ -194,7 +194,7 @@ export function CombustiblesLiquidos() {
       {/* Dropdown de selección */}
       <div className="mb-4">
         <select
-          className="bg-[#262626] text-gray-200 p-2 rounded border border-[#666666] font-sans"
+          className="bg-[#262626] text-gray-200 p-2 rounded-sm border border-[#666666] font-sans"
           value={selected}
           onChange={e => setSelected(e.target.value)}
         >
@@ -220,11 +220,11 @@ export function CombustiblesLiquidos() {
           return (
             <div
               key={idx}
-              className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow relative"
+              className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow-sm relative"
             >
              {/* Botón de ayuda */}
               <button
-                className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow hover:bg-[#666] transition-colors"
+                className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow-sm hover:bg-[#666] transition-colors"
                 style={{ width: 30, height: 30 }}
                 title="Ayuda"
                 onClick={() => alert('Ok Aquí puedes mostrar ayuda contextual o abrir un modal.')}

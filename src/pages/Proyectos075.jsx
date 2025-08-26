@@ -42,7 +42,7 @@ export default function Proyectos075() {
                     <input
                         type="text"
                         placeholder="Buscar"
-                        className="pl-8 pr-3 py-1 rounded bg-[#1f1f1f] text-white font-sans focus:outline-none"
+                        className="pl-8 pr-3 py-1 rounded-sm bg-[#1f1f1f] text-white font-sans focus:outline-hidden"
                     />
                 </div>
                 */}        

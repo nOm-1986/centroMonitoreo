@@ -67,13 +67,13 @@ export default function IndicadoresProyectos075() {
     return (
       <div className="px-4 py-6 text-white">
         <div className="animate-pulse space-y-6">
-          <div className="h-8 bg-neutral-700 rounded w-1/2 mx-auto" />
+          <div className="h-8 bg-neutral-700 rounded-sm w-1/2 mx-auto" />
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {ORDER.map((_, i) => (
-              <div key={i} className="bg-[#262626] p-5 rounded-lg border border-[#666666] shadow">
-                <div className="h-6 bg-neutral-700 rounded mb-4" />
-                <div className="h-8 bg-neutral-600 rounded mb-2" />
-                <div className="h-3 bg-neutral-700 rounded w-1/2" />
+              <div key={i} className="bg-[#262626] p-5 rounded-lg border border-[#666666] shadow-sm">
+                <div className="h-6 bg-neutral-700 rounded-sm mb-4" />
+                <div className="h-8 bg-neutral-600 rounded-sm mb-2" />
+                <div className="h-3 bg-neutral-700 rounded-sm w-1/2" />
               </div>
             ))}
           </div>
@@ -128,9 +128,9 @@ export default function IndicadoresProyectos075() {
       <div className="px-2 mt-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {cards.map(({ key, icon, label, value }) => (
-            <div key={key} className="bg-[#262626] p-5 rounded-lg border border-[#666666] shadow">
+            <div key={key} className="bg-[#262626] p-5 rounded-lg border border-[#666666] shadow-sm">
               <div className="flex items-center mb-2">
-                <img src={icon} alt={label} className="w-6 h-6 flex-shrink-0" />
+                <img src={icon} alt={label} className="w-6 h-6 shrink-0" />
                 <span className="ml-2 text-[18px] font-normal leading-[26px] text-[#B0B0B0]">
                   {label}
                 </span>
@@ -138,7 +138,7 @@ export default function IndicadoresProyectos075() {
               <div className="flex text-white text-2xl font-bold">
                 {value}
                 <HelpCircle
-                  className="text-white cursor-pointer hover:text-gray-300 bg-neutral-700 self-center rounded h-6 w-6 p-1 ml-4"
+                  className="text-white cursor-pointer hover:text-gray-300 bg-neutral-700 self-center rounded-sm h-6 w-6 p-1 ml-4"
                   title="Ayuda"
                 />
               </div>

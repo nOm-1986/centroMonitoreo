@@ -119,7 +119,7 @@ export function ListadoProyectosCurvaS() {
 
   if (loading) {
     return (
-       <div className="bg-[#262626] p-4 rounded border border-gray-700 shadow flex flex-col items-center justify-center h-64">
+       <div className="bg-[#262626] p-4 rounded-sm border border-gray-700 shadow-sm flex flex-col items-center justify-center h-64">
       <div className="flex space-x-2">
         <div
           className="w-3 h-3 rounded-full animate-bounce"
@@ -141,7 +141,7 @@ export function ListadoProyectosCurvaS() {
 
   if (error) {
     return (
-      <div className="bg-[#262626] p-4 rounded border border-gray-700 shadow">
+      <div className="bg-[#262626] p-4 rounded-sm border border-gray-700 shadow-sm">
         <p className="text-red-500">{error}</p>
       </div>
     );
@@ -188,13 +188,13 @@ export function ListadoProyectosCurvaS() {
    
 
   return (
-    <div className="bg-[#262626] p-4 rounded border border-gray-700 shadow mb-8">
+    <div className="bg-[#262626] p-4 rounded-sm border border-gray-700 shadow-sm mb-8">
       <h2 className="text-2xl font-semibold mb-4 text-white">Proyectos (Curva S)</h2>
 
       {/* Gráfica Curva S */}
       <div className="mb-6 relative">
         <button
-        className="absolute top-[10px] right-[45px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow hover:bg-[#666] transition-colors"
+        className="absolute top-[10px] right-[45px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow-sm hover:bg-[#666] transition-colors"
         style={{ width: 30, height: 30 }}
         title="Ayuda"
         onClick={() => alert('Ok puedes mostrar ayuda contextual o abrir un modal.')}

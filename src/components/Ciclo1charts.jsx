@@ -282,7 +282,7 @@ export default function Ciclo1Charts() {
   return (
     <div className="p-4 bg-[#262626] rounded-lg">
       {/* Primer bloque */}
-      <div className="w-full h-120 p-4 bg-[#262626] rounded shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-sm shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={proyectosDeptoOptions} />
       </div>
 
@@ -290,21 +290,21 @@ export default function Ciclo1Charts() {
       <hr className="border-t border-[#666666] my-6" />
 
       {/* Segundo bloque */}
-      <div className="w-full h-120 p-4 bg-[#262626] rounded shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-sm shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={proyectosEstadoOptions} />
       </div>
 
       <hr className="border-t border-[#666666] my-6" />
 
       {/* Tercer bloque */}
-      <div className="w-full h-120 p-4 bg-[#262626] rounded shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-sm shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={capacidadDeptoOptions} />
       </div>
 
       <hr className="border-t border-[#666666] my-6" />
 
       {/* Cuarto bloque */}
-      <div className="w-full h-120 p-4 bg-[#262626] rounded shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-sm shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={capacidadEstadoOptions} />
       </div>
     </div>

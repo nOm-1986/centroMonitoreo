@@ -2,6 +2,7 @@
   "name": "centro-monitoreo-react",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -31,10 +32,9 @@
     "react-to-print": "^3.1.1"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.1.12",
     "@vitejs/plugin-react": "^4.7.0",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24",
-    "tailwindcss": "^3.3.2",
+    "tailwindcss": "^4.1.12",
     "vite": "^5.4.19"
   }
 }

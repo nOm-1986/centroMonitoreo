@@ -128,7 +128,7 @@ export function IndicadoresEnergia({ fechaInicio = '2025-05-01', fechaFin = '202
 
   if (loading) {
     return (
-      <div className="bg-[#262626] p-4 rounded border border-gray-700 shadow flex flex-col items-center justify-center h-64">
+      <div className="bg-[#262626] p-4 rounded-sm border border-gray-700 shadow-sm flex flex-col items-center justify-center h-64">
       <div className="flex space-x-2">
         <div
           className="w-3 h-3 rounded-full animate-bounce"
@@ -150,7 +150,7 @@ export function IndicadoresEnergia({ fechaInicio = '2025-05-01', fechaFin = '202
 
   if (error) {
     return (
-      <div className="bg-[#262626] p-4 rounded border border-gray-700 shadow">
+      <div className="bg-[#262626] p-4 rounded-sm border border-gray-700 shadow-sm">
         <p className="text-red-500">{error}</p>
       </div>
     );
@@ -162,7 +162,7 @@ export function IndicadoresEnergia({ fechaInicio = '2025-05-01', fechaFin = '202
       <h2 className="text-2xl font-semibold mb-4 text-white font-sans">
         Indicadores Energía Eléctrica
       </h2>
-      <div className="bg-[#262626] p-4 rounded border border-gray-700 shadow">
+      <div className="bg-[#262626] p-4 rounded-sm border border-gray-700 shadow-sm">
         {/* Precio de escasez */}
         <div className="flex flex-col gap-2 mb-4">
           <h3 className="text-lg font-semibold text-gray-300">

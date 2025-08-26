@@ -5,7 +5,7 @@ export default function ErrorMessage({ error, onRetry }) {
       <div>Error: {error}</div>
       <button 
         onClick={onRetry || (() => window.location.reload())}
-        className="mt-2 bg-red-500 text-white px-4 py-2 rounded"
+        className="mt-2 bg-red-500 text-white px-4 py-2 rounded-sm"
       >
         Reintentar
       </button>

@@ -351,9 +351,9 @@ export default function GraficaANLA() {
   return (
     <div className="space-y-6 rounded-lg">
       {/* Gráfico Resumen ANLA */}
-      <div className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow relative">
+      <div className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow-sm relative">
         <button
-          className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow hover:bg-[#666] transition-colors"
+          className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow-sm hover:bg-[#666] transition-colors"
           style={{ width: 30, height: 30 }}
           title="Ayuda"
           onClick={() => alert('Esta gráfica muestra las licencias FNCIER otorgadas por año y tecnología.')}
@@ -383,9 +383,9 @@ export default function GraficaANLA() {
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {seriesData.map((serie, index) => (
-          <div key={index} className="bg-[#262626] rounded-lg border border-[#666666] h-[420px] p-1  relative h-[420px]">
+          <div key={index} className="bg-[#262626] rounded-lg border border-[#666666] h-[420px] p-1  relative">
             <button
-          className="absolute top-[13px] right-[48px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow hover:bg-[#666] transition-colors"
+          className="absolute top-[13px] right-[48px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow-sm hover:bg-[#666] transition-colors"
           style={{ width: 30, height: 30 }}
           title="Ayuda"
           onClick={() => alert(`Gráfica de ${serie.name}: Muestra la capacidad instalada licenciada en MW por año.`)}
@@ -413,7 +413,7 @@ export default function GraficaANLA() {
       {/* Gráfico de tiempos promedio */}
       <div className="bg-[#262626] rounded-lg border border-[#666666] relative p-2">
         <button
-          className="absolute top-[4%] right-[52px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow hover:bg-[#666] transition-colors"
+          className="absolute top-[4%] right-[52px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow-sm hover:bg-[#666] transition-colors"
           style={{ width: 30, height: 30 }}
           title="Ayuda"
           onClick={() => alert('Muestra el tiempo promedio en días que tarda la aprobación de licencias por departamento.')}

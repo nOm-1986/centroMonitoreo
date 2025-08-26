@@ -133,9 +133,9 @@ export function SeguimientoBarras() {
           Numero de proyectos
         </button>
       </div>
-      <div className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow relative">
+      <div className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow-sm relative">
           <button
-            className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow hover:bg-[#666] transition-colors"
+            className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow-sm hover:bg-[#666] transition-colors"
             style={{ width: 30, height: 30 }}
             title="Ayuda"
             onClick={() => alert('Ok puedes mostrar ayuda contextual o abrir un modal.')}

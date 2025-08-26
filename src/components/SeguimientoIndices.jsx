@@ -11,35 +11,35 @@ const indicadores = [
     titulo: 'Postulaciones totales ciclo 1',
     valor: '38.541 MW',
     variacion: '596 proyectos',
-    icono: <img src={DemandaOn} alt='Demanda energía SIN' className="w-6 h-6 flex-shrink-0"/>,
+    icono: <img src={DemandaOn} alt='Demanda energía SIN' className="w-6 h-6 shrink-0"/>,
     fecha: 'Actualizado el: 8/5/2025'
   },
   {
     titulo: 'Postulaciones totales ciclo 2',
     valor: '98.868 MW',
     variacion: '1718 proyectos',
-    icono: <img src={DemandaOn} alt='Generación hidráulica' className="w-6 h-6 flex-shrink-0"/>,
+    icono: <img src={DemandaOn} alt='Generación hidráulica' className="w-6 h-6 shrink-0"/>,
     fecha: 'Actualizado el: 8/5/2025'
   },
   {
     titulo: 'Aprobaciones ciclo 1',
     valor: '6.082 MW',
     variacion: '148 proyectos',
-    icono: <img src={DemandaOn} alt='Generación térmica' className="w-6 h-6 flex-shrink-0"/>,
+    icono: <img src={DemandaOn} alt='Generación térmica' className="w-6 h-6 shrink-0"/>,
     fecha: 'Actualizado el: 8/5/2025'
   },
   {
     titulo: 'Aprobaciones ciclo 2',
     valor: '90,8 MW',
     variacion: '4 proyectos',
-    icono: <img src={DemandaOn} alt='Generación solar y eólica' className="w-6 h-6 flex-shrink-0"/>,
+    icono: <img src={DemandaOn} alt='Generación solar y eólica' className="w-6 h-6 shrink-0"/>,
     fecha: 'Actualizado el: 8/5/2025'
   },
   {
     titulo: 'En evaluación ciclo 2',
     valor: '81.802 MW',
     variacion: '1,458 proyectos',
-    icono: <img src={DemandaOn} alt='Generación solar y eólica' className="w-6 h-6 flex-shrink-0"/>,
+    icono: <img src={DemandaOn} alt='Generación solar y eólica' className="w-6 h-6 shrink-0"/>,
     fecha: 'Actualizado el: 8/5/2025'
   }
 ]
@@ -71,7 +71,7 @@ export default function SeguimientoIndices() {
                 </div>
 
                 <div className='flex gap-x-3 justify-items-center'>
-                  <div className="bg-neutral-700 text-center rounded gap-1 px-2 text-[#d1d1d0] text-[11px] font-medium flex h-6 self-center">
+                  <div className="bg-neutral-700 text-center rounded-sm gap-1 px-2 text-[#d1d1d0] text-[11px] font-medium flex h-6 self-center">
                     <div className='self-center'>
                       {i.variacion}
                     </div>

@@ -10,28 +10,28 @@ const indicadores = [
     titulo: 'Demanda energía SIN',
     valor: '225.40 MWh',
     variacion: '+11.77%',
-    icono: <img src={DemandaOn} alt='Demanda energía SIN' className="w-6 h-6 flex-shrink-0"/>,
+    icono: <img src={DemandaOn} alt='Demanda energía SIN' className="w-6 h-6 shrink-0"/>,
     fecha: 'Actualizado el: 8/5/2025'
   },
   {
     titulo: 'Generación hidráulica',
     valor: '177.38 MWh',
     variacion: '+11.77%',
-    icono: <img src={HidroOn} alt='Generación hidráulica' className="w-6 h-6 flex-shrink-0"/>,
+    icono: <img src={HidroOn} alt='Generación hidráulica' className="w-6 h-6 shrink-0"/>,
     fecha: 'Actualizado el: 8/5/2025'
   },
   {
     titulo: 'Generación térmica',
     valor: '19.95 MWh',
     variacion: '+11.77%',
-    icono: <img src={GeneracionTermicaOn} alt='Generación térmica' className="w-6 h-6 flex-shrink-0"/>,
+    icono: <img src={GeneracionTermicaOn} alt='Generación térmica' className="w-6 h-6 shrink-0"/>,
     fecha: 'Actualizado el: 8/5/2025'
   },
   {
     titulo: 'Generación solar y eólica',
     valor: '9.94 MWh',
     variacion: '+11.77%',
-    icono: <img src={EolicaOn} alt='Generación solar y eólica' className="w-6 h-6 flex-shrink-0"/>,
+    icono: <img src={EolicaOn} alt='Generación solar y eólica' className="w-6 h-6 shrink-0"/>,
     fecha: 'Actualizado el: 8/5/2025'
   }
 ]
@@ -59,14 +59,14 @@ export function IndicadoresResumen() {
               <div className="text-xl font-semibold text-white">
                 {i.valor}
               </div>
-              <div className="bg-neutral-700 text-center rounded gap-1 px-2 text-[#d1d1d0] text-[11px] font-medium flex h-6 self-center">
+              <div className="bg-neutral-700 text-center rounded-sm gap-1 px-2 text-[#d1d1d0] text-[11px] font-medium flex h-6 self-center">
                 <MoveUp size={12} className='self-center'/>
                 <div className='self-center'>
                   {i.variacion}
                 </div>
               </div>
               <HelpCircle
-                className="text-white cursor-pointer hover:text-gray-300 bg-neutral-700 self-center rounded h-6 w-6 p-1"
+                className="text-white cursor-pointer hover:text-gray-300 bg-neutral-700 self-center rounded-sm h-6 w-6 p-1"
                 title="Ayuda"
               />
             </div>

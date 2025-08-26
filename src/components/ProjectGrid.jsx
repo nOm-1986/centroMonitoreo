@@ -124,7 +124,7 @@ Highcharts.setOptions({
 
 // ——— Componente reutilizable de carga ———
 const LoadingSpinner = ({ message = "Cargando datos..." }) => (
-  <div className="bg-[#262626] p-4 rounded border border-gray-700 shadow flex flex-col items-center justify-center h-64">
+  <div className="bg-[#262626] p-4 rounded-sm border border-gray-700 shadow-sm flex flex-col items-center justify-center h-64">
     <div className="flex space-x-2">
       <div className="w-3 h-3 rounded-full animate-bounce" style={{ backgroundColor: 'rgba(255,200,0,1)', animationDelay: '0s' }} />
       <div className="w-3 h-3 rounded-full animate-bounce" style={{ backgroundColor: 'rgba(255,200,0,1)', animationDelay: '0.2s' }} />
@@ -441,7 +441,7 @@ export default function ProyectoDetalle() {
             onClick={() => setOpenFilter(openFilter==='id'?'':'id')}
           />
           {openFilter==='id' && (
-            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded shadow z-50">
+            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded-sm shadow-sm z-50">
               <input
                 type="text"
                 placeholder="Buscar..."
@@ -468,7 +468,7 @@ export default function ProyectoDetalle() {
             onClick={() => setOpenFilter(openFilter==='nombre'?'':'nombre')}
           />
           {openFilter==='nombre' && (
-            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded shadow z-50">
+            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded-sm shadow-sm z-50">
               <input
                 type="text"
                 placeholder="Buscar..."
@@ -501,7 +501,7 @@ export default function ProyectoDetalle() {
             onClick={() => setOpenFilter(openFilter==='capacidad'?'':'capacidad')}
           />
           {openFilter==='capacidad' && (
-            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded shadow z-50">
+            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded-sm shadow-sm z-50">
               <input
                 type="text"
                 placeholder="Buscar..."
@@ -529,7 +529,7 @@ export default function ProyectoDetalle() {
             onClick={() => setOpenFilter(openFilter==='fpo'?'':'fpo')}
           />
           {openFilter==='fpo' && (
-            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded shadow z-50">
+            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded-sm shadow-sm z-50">
               <input
                 type="text"
                 placeholder="Buscar..."
@@ -556,7 +556,7 @@ export default function ProyectoDetalle() {
             onClick={() => setOpenFilter(openFilter==='avance'?'':'avance')}
           />
           {openFilter==='avance' && (
-            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded shadow z-50">
+            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded-sm shadow-sm z-50">
               <input
                 type="text"
                 placeholder="Buscar..."
@@ -583,7 +583,7 @@ export default function ProyectoDetalle() {
             onClick={() => setOpenFilter(openFilter==='priorizado'?'':'priorizado')}
           />
           {openFilter === 'priorizado' && (
-            <div className="absolute overflow-visible bg-[#1f1f1f] p-2 mt-1 rounded shadow z-50">
+            <div className="absolute overflow-visible bg-[#1f1f1f] p-2 mt-1 rounded-sm shadow-sm z-50">
               <input
                 type="text"
                 placeholder="Buscar..."
@@ -610,7 +610,7 @@ export default function ProyectoDetalle() {
             onClick={() => setOpenFilter(openFilter==='ciclo'?'':'ciclo')}
           />
           {openFilter === 'ciclo' && (
-            <div className="absolute overflow-visible bg-[#1f1f1f] p-2 mt-1 rounded shadow z-50">
+            <div className="absolute overflow-visible bg-[#1f1f1f] p-2 mt-1 rounded-sm shadow-sm z-50">
               <input
                 type="text"
                 placeholder="Buscar..."
@@ -643,7 +643,7 @@ export default function ProyectoDetalle() {
             onClick={() => setOpenFilter(openFilter==='promotor'?'':'promotor')}
           />
           {openFilter==='promotor' && (
-            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded shadow z-50">
+            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded-sm shadow-sm z-50">
               <input
                 type="text"
                 placeholder="Buscar..."
@@ -676,7 +676,7 @@ export default function ProyectoDetalle() {
             onClick={() => setOpenFilter(openFilter==='departamento'?'':'departamento')}
           />
           {openFilter === 'departamento' && (
-            <div className="absolute overflow-visible bg-[#1f1f1f] p-2 mt-1 rounded shadow z-50">
+            <div className="absolute overflow-visible bg-[#1f1f1f] p-2 mt-1 rounded-sm shadow-sm z-50">
               <input
                 type="text"
                 placeholder="Buscar..."
@@ -709,7 +709,7 @@ export default function ProyectoDetalle() {
             onClick={() => setOpenFilter(openFilter==='municipio'?'':'municipio')}
           />
           {openFilter === 'municipio' && (
-            <div className="absolute overflow-visible bg-[#1f1f1f] p-2 mt-1 rounded shadow z-50">
+            <div className="absolute overflow-visible bg-[#1f1f1f] p-2 mt-1 rounded-sm shadow-sm z-50">
               <input
                 type="text"
                 placeholder="Buscar..."
@@ -778,7 +778,7 @@ const columnsSeguimiento = [
 
   if (loadingList) return <LoadingSpinner message="Cargando lista de proyectos..." />;
   if (errorList)   return (
-    <div className="bg-[#262626] p-4 rounded border border-gray-700 shadow flex flex-col items-center justify-center h-[500px]">
+    <div className="bg-[#262626] p-4 rounded-sm border border-gray-700 shadow-sm flex flex-col items-center justify-center h-[500px]">
       <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-red-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
@@ -814,17 +814,17 @@ const columnsSeguimiento = [
 
       {/* Seguimiento Curva S */}
       {activeTab==='Seguimiento Curva S' && (
-        <div className="bg-[#262626] p-4 rounded-lg shadow">
+        <div className="bg-[#262626] p-4 rounded-lg shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <input
               type="text"
               placeholder="Buscar..."
               value={globalFilter}
               onChange={e => setGlobalFilter(e.target.value)}
-              className="bg-[#1f1f1f] placeholder-gray-500 text-white rounded p-2 w-1/3"
+              className="bg-[#1f1f1f] placeholder-gray-500 text-white rounded-sm p-2 w-1/3"
             />
             <button
-              className="flex items-center gap-1 bg-yellow-400 text-gray-800 px-3 py-1 rounded hover:bg-yellow-500"
+              className="flex items-center gap-1 bg-yellow-400 text-gray-800 px-3 py-1 rounded-sm hover:bg-yellow-500"
               onClick={() => exportToCSV(filteredSeguimiento)}
             >
               <Download size={16} /> Exportar CSV
@@ -851,7 +851,7 @@ const columnsSeguimiento = [
           {/* Curva S */}
           <div
             ref={chartContainerRef}
-            className="mt-6 bg-[#262626] p-4 rounded-lg shadow min-h-[600px] scroll-mt-24"
+            className="mt-6 bg-[#262626] p-4 rounded-lg shadow-sm min-h-[600px] scroll-mt-24"
           >
             {loadingCurve
               ? <p className="text-gray-300">Cargando curva S…</p>
@@ -869,17 +869,17 @@ const columnsSeguimiento = [
 
       {/* Todos los proyectos */}
       {activeTab==='Todos los proyectos' && (
-        <div className="bg-[#262626] p-4 rounded-lg shadow">
+        <div className="bg-[#262626] p-4 rounded-lg shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <input
               type="text"
               placeholder="Buscar..."
               value={globalFilter}
               onChange={e => setGlobalFilter(e.target.value)}
-              className="bg-[#1f1f1f] placeholder-gray-500 text-white rounded p-2 w-1/3"
+              className="bg-[#1f1f1f] placeholder-gray-500 text-white rounded-sm p-2 w-1/3"
             />
             <button
-              className="flex items-center gap-1 bg-yellow-400 text-gray-800 px-3 py-1 rounded hover:bg-yellow-500"
+              className="flex items-center gap-1 bg-yellow-400 text-gray-800 px-3 py-1 rounded-sm hover:bg-yellow-500"
               onClick={() => exportToCSV(filteredAll)}
             >
               <Download size={16} /> Exportar CSV
@@ -907,7 +907,7 @@ const columnsSeguimiento = [
 
       {/* ——— Proyectos ANLA ——— */}
       {activeTab==='Proyectos ANLA' && (
-        <div className="bg-[#262626] p-6 rounded-lg shadow text-gray-400">
+        <div className="bg-[#262626] p-6 rounded-lg shadow-sm text-gray-400">
           <GraficaANLA/>
         </div>
       )}

@@ -1,9 +1,10 @@
-// src/App.jsx
 import { useState } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import { ThemeProvider } from './components/ThemeProvider';
+
 
 import { ALLOWED_DOMAINS } from './config/allowedDomains';
 import { ROLES, ROLE_PERMISSIONS } from './config/roles';
@@ -40,9 +41,9 @@ function AppContent() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-[#1d1d1d]">
+      <div className="flex items-center justify-center min-h-screen bg-background">
         <div className="flex flex-col items-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#FFC800] mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent mb-4"></div>
           <p className="text-white">Verificando credenciales...</p>
         </div>
       </div>
@@ -60,7 +61,7 @@ function AppContent() {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }} 
-        className="h-screen bg-[#262626] flex flex-col items-center justify-center overflow-hidden"
+        className="h-screen bg-background flex flex-col items-center justify-center overflow-hidden"
       >
         <div className="w-full max-w-md bg-transparent">
           <AuthButton />
@@ -81,7 +82,7 @@ function AppContent() {
 
   if (!isAuthorized) {
     return (
-      <div className="min-h-screen bg-[#262626] flex flex-col items-center justify-center p-4">
+      <div className="min-h-screen bg-card flex flex-col items-center justify-center p-4">
         <div className="w-full max-w-md">
           <AuthButton />
           <p className="mt-4 text-sm text-red-500 text-center">
@@ -96,7 +97,7 @@ function AppContent() {
     <div className="relative">
       <Header userRole={userRole} />
       
-      <div className="flex bg-[#1d1d1d] min-h-screen pt-20">
+      <div className="flex bg-background min-h-screen pt-20">
         <Sidebar
           open={sidebarOpen}
           toggle={() => setSidebarOpen(prev => !prev)}
@@ -197,24 +198,32 @@ function AppContent() {
 export default function App() {
   return (
     <AuthProvider>
-      <Routes>
-        <Route path="/*" element={<AppContent />} />
-        <Route path="/login" element={
-          <div 
-            style={{ 
-              backgroundImage: `url(${Login})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }} 
-            className="min-h-screen flex flex-col items-center justify-center p-4"
-          >
-            <div className="w-full max-w-md">
-              <AuthButton />
-            </div>
-          </div>
-        } />
-      </Routes>
+      <ThemeProvider
+        defaultTheme='light'
+        storageKey='vite-ui-theme'
+      >
+        <Routes>
+          <Route path="/*" element={<AppContent />} />
+          <Route
+            path="/login"
+            element={
+              <div
+                style={{
+                  backgroundImage: `url(${Login})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+                className="min-h-screen flex flex-col items-center justify-center p-4"
+              >
+                <div className="w-full max-w-md">
+                  <AuthButton />
+                </div>
+              </div>
+            }
+          />
+        </Routes>
+      </ThemeProvider>
     </AuthProvider>
   );
 }

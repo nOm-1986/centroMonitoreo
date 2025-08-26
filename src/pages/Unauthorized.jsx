@@ -18,8 +18,8 @@ export default function Unauthorized() {
     };
 
     return (
-        <div className="min-h-screen bg-[#1d1d1d] flex items-center justify-center p-4">
-            <div className="bg-[#1d1d1d] bg-opacity-70 border border-[#666666] rounded-lg p-8 shadow-md w-full max-w-sm text-white">
+        <div className="min-h-screen bg-background flex items-center justify-center p-4">
+            <div className="bg-background bg-opacity-70 border border-[#666666] rounded-lg p-8 shadow-md w-full max-w-sm text-white">
                 <div className="flex flex-col items-center space-y-4">
                     {/* Icono de seguridad personalizado */}
                     <div className="bg-[#FFC800] bg-opacity-20 p-3 rounded-full">
@@ -41,7 +41,7 @@ export default function Unauthorized() {
                     {/* Botón amarillo con icono */}
                     <button
                         onClick={handleLogout}
-                        className="w-full bg-[#FFC800] hover:bg-[#e6b400] text-black px-4 py-2 rounded font-medium transition-colors flex items-center justify-center gap-2"
+                        className="w-full bg-[#FFC800] hover:bg-[#e6b400] text-black px-4 py-2 rounded-sm font-medium transition-colors flex items-center justify-center gap-2"
                     >
                         <img 
                             src={SecurityIcon} 

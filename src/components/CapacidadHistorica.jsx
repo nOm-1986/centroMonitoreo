@@ -251,7 +251,7 @@ export function CapacidadHistorica() {
   }, []);
 
   return (
-    <div className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow">
+    <div className="bg-card p-4 rounded-lg border border-[#666666] shadow-sm">
       <HighchartsReact highcharts={Highcharts} options={options} ref={chartRef} />
     </div>
   );

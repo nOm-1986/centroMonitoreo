@@ -52,7 +52,7 @@ export function Header() {
                     <div className="relative">
                         <button
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                            className="flex items-center space-x-2 focus:outline-none"
+                            className="flex items-center space-x-2 focus:outline-hidden"
                         >
                             <User 
                                 size={28} 
@@ -65,7 +65,7 @@ export function Header() {
                         </button>
 
                         {isDropdownOpen && (
-                            <div className="absolute right-0 mt-2 w-48 bg-[#1d1d1d] rounded-md shadow-lg border border-[#575756] z-50">
+                            <div className="absolute right-0 mt-2 w-48 bg-background rounded-md shadow-lg border border-[#575756] z-50">
                                 <div className="px-4 py-3 border-b border-[#575756]">
                                     <p className="text-sm text-white font-medium">
                                         {currentUser.displayName || 'Usuario'}

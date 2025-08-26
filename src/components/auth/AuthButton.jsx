@@ -234,7 +234,7 @@ export default function AuthButton() {
   // Contenido principal del componente (formulario de login o mensaje de bienvenida)
   return (
    <div className="w-full max-w-md mx-auto">
-      <div className="bg-[#1d1d1d] bg-opacity-70 border border-[#666666] rounded-lg p-8 shadow-md w-full max-w-sm text-white">
+      <div className="bg-background bg-opacity-70 border border-[#666666] rounded-lg p-8 shadow-md w-full max-w-sm text-white">
         <div className="flex justify-center mb-6">
           <img src={logo} alt="Logo Energia UPME" className="h-16 object-contain" />
         </div>
@@ -248,7 +248,7 @@ export default function AuthButton() {
             <>
               <button
                 onClick={() => handleLogin(googleProvider, 'google')}
-                className="w-full max-w-xs bg-[#FFC800] hover:bg-[#e6b400] text-black px-4 py-2 rounded font-medium transition-colors flex items-center justify-center"
+                className="w-full max-w-xs bg-[#FFC800] hover:bg-[#e6b400] text-black px-4 py-2 rounded-sm font-medium transition-colors flex items-center justify-center"
                 disabled={buttonLoading.google} // Deshabilita el botón mientras se carga
               >
                 {buttonLoading.google ? (
@@ -264,7 +264,7 @@ export default function AuthButton() {
 
               <button
                 onClick={() => handleLogin(microsoftProvider, 'microsoft')}
-                className="w-full max-w-xs bg-[#0078D4] hover:bg-[#106EBE] text-white px-4 py-2 rounded font-medium transition-colors flex items-center justify-center"
+                className="w-full max-w-xs bg-[#0078D4] hover:bg-[#106EBE] text-white px-4 py-2 rounded-sm font-medium transition-colors flex items-center justify-center"
                 disabled={buttonLoading.microsoft} // Deshabilita el botón mientras se carga
               >
                 {buttonLoading.microsoft ? (

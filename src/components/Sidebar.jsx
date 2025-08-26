@@ -1,12 +1,9 @@
-// src/components/Sidebar.jsx
-import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { ROLES, ROLE_PERMISSIONS } from '../config/roles';
 
-// Iconos (Vite devuelve la URL del SVG)
-import DashboardOff from '../assets/svg-icons/Dashboard-Off.svg';
-import DashboardOn from '../assets/svg-icons/Dashboard-On.svg';
+import { useTheme } from './ThemeProvider';
+
 import GWOff from '../assets/svg-icons/6GW-off.svg';
 import GWOn from '../assets/svg-icons/6GW-on.svg';
 import ComunidadesEnergOff from '../assets/svg-icons/ComunidadesEnerg-Off.svg';
@@ -21,14 +18,17 @@ import ProyectosTransmisionOff from '../assets/svg-icons/Transmision-Off.svg';
 // NUEVOS: Hidrología y Energía firme (usa tus propios SVG si los tienes)
 import HidroOff from '../assets/svg-icons/Hidrologia-Off.svg';
 import HidroOn  from '../assets/svg-icons/Hidrologia-On.svg';
+
 // Placeholder para Energía firme usando los de energía eléctrica:
 import EnergiaFirmeOff from '../assets/svg-icons/EnergiaElectrica-Off.svg';
 import EnergiaFirmeOn  from '../assets/svg-icons/EnergiaElectrica-On.svg';
 
+// * All this must be converted to an React-Component: see https://www.svgr.com for detaills.  
+
 export function Sidebar({ open, toggle, userRole }) {
+  const { theme, setTheme } = useTheme(); 
   const { pathname } = useLocation();
 
-  // -------- helpers de permisos/roles --------
   const hasPermission = (permission) => {
     if (!userRole || !ROLE_PERMISSIONS[userRole]) return false;
     const userPermissions = ROLE_PERMISSIONS[userRole];
@@ -121,13 +121,13 @@ export function Sidebar({ open, toggle, userRole }) {
 
   return (
     <aside
-      className={`bg-[#262626] font-sans mt-3 sticky top-24 text-gray-300 h-screen overflow-y-auto flex flex-col transition-all duration-300 ${
+      className={`bg-sidebar font-sans mt-3 sticky top-24 text-gray-300 h-screen overflow-y-auto flex flex-col transition-all duration-300 ${
         open ? 'w-1/6 p-4' : 'w-16 p-2'
       }`}
     >
       {/* Botón toggle */}
       <div className="flex justify-end mb-4">
-        <button onClick={toggle} className="text-white focus:outline-none" title="Expandir/Contraer">
+        <button onClick={toggle} className="text-white focus:outline-hidden" title="Expandir/Contraer">
           {open ? <ChevronLeft size={24} /> : <ChevronRight size={24} />}
         </button>
       </div>
@@ -183,7 +183,7 @@ export function Sidebar({ open, toggle, userRole }) {
                                     isActive ? 'bg-[#333333]' : ''
                                   }`}
                                 >
-                                  <img src={IconSVG} alt={item.title} className="w-6 h-6 flex-shrink-0" />
+                                  <img src={IconSVG} alt={item.title} className="w-6 h-6 shrink-0" />
                                   {open && (
                                     <span
                                       className={`ml-3 text-base whitespace-nowrap ${
@@ -201,7 +201,7 @@ export function Sidebar({ open, toggle, userRole }) {
                                     isActive ? 'bg-[#333333]' : ''
                                   }`}
                                 >
-                                  <img src={IconSVG} alt={item.title} className="w-6 h-6 flex-shrink-0" />
+                                  <img src={IconSVG} alt={item.title} className="w-6 h-6 shrink-0" />
                                   {open && (
                                     <span
                                       className={`ml-3 text-base whitespace-nowrap ${
@@ -229,7 +229,7 @@ export function Sidebar({ open, toggle, userRole }) {
                     <img
                       src={section.activeIcon || section.icon}
                       alt={section.title}
-                      className="w-5 h-5 flex-shrink-0"
+                      className="w-5 h-5 shrink-0"
                     />
                     {open && <span className="ml-3">{section.title}</span>}
                   </Link>
@@ -238,6 +238,12 @@ export function Sidebar({ open, toggle, userRole }) {
             )
           );
         })}
+
+        <button onClick={() => {
+          console.log("click")
+          setTheme(theme === "dark" ? "light" : "dark")}}>
+          Change theme
+        </button>
       </nav>
     </aside>
   );

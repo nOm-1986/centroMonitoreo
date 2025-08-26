@@ -16,7 +16,7 @@ const ComunidadesEnergeticasReplica = () => {
   ];
 
   return (
-    <div className="bg-[#1d1d1d] min-h-screen text-white">
+    <div className="bg-background min-h-screen text-white">
       {/* Banner MÁS BAJO */}
       <div className="relative w-full rounded-b-xl overflow-hidden">
         <img
@@ -25,7 +25,7 @@ const ComunidadesEnergeticasReplica = () => {
           className="w-full h-32 sm:h-40 object-cover" /* altura reducida */
         />
         {/* Oscurecido suave para contraste del título */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-black/30 via-black/10 to-transparent" />
         <div className="absolute inset-0 flex items-center justify-between px-6 sm:px-8">
           <h1 className="text-3xl sm:text-6xl font-semibold tracking-tight">
             Comunidades energéticas
@@ -53,7 +53,7 @@ const ComunidadesEnergeticasReplica = () => {
           {dataCards.map((card) => (
             <div
               key={card.id}
-              className="bg-[#262626] rounded-lg border border-[#3a3a3a] shadow p-5"
+              className="bg-[#262626] rounded-lg border border-[#3a3a3a] shadow-sm p-5"
             >
               <div className="flex items-center gap-2 mb-3">
                 <img src={card.icon} alt="icono" className="w-5 h-5" />

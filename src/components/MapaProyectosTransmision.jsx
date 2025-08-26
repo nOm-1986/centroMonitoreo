@@ -7,7 +7,7 @@ const MapaProyectosTransmision = ({ mapUrl, title = "Mapa del Proyecto" }) => {
       <h2 className="text-2xl font-semibold text-gray-200 mb-4">
         {title}
       </h2>
-      <div className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow">
+      <div className="bg-[#262626] p-4 rounded-lg border border-[#666666] shadow-sm">
         <iframe 
           src={mapUrl} 
           title={title}

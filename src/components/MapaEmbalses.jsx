@@ -64,7 +64,7 @@ export function MapaEmbalses() {
   return (
     <section className="mt-8 grid grid-cols-1 xl:grid-cols-4 gap-6">
       {/* Mapa */}
-      <div className="map-container xl:col-span-3 bg-[#262626] rounded-lg border border-[#666666] shadow overflow-hidden h-[650px] p-2 relative">
+      <div className="map-container xl:col-span-3 bg-[#262626] rounded-lg border border-[#666666] shadow-sm overflow-hidden h-[650px] p-2 relative">
         {/* Controles de zoom */}
         <div className="absolute top-2 right-2 z-10 flex flex-col space-y-2">
           <button
@@ -95,7 +95,7 @@ export function MapaEmbalses() {
               <div className="mt-4 text-right">
                 <button
                   onClick={() => setSelectedDept(null)}
-                  className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-500"
+                  className="bg-gray-600 text-white px-4 py-2 rounded-sm hover:bg-gray-500"
                 >
                   Close
                 </button>
@@ -125,7 +125,7 @@ export function MapaEmbalses() {
         { /* Nueva card */ }
         <div className="flex flex-col gap-3 p-5 bg-[#262626] border border-[#575756] rounded-lg" >
           <div className="flex items-start gap-3">
-            <img src={HidroOn} alt='Generación hidráulica' className="w-6 h-6 flex-shrink-0"/>
+            <img src={HidroOn} alt='Generación hidráulica' className="w-6 h-6 shrink-0"/>
             <h3 className="text-[18px] font-normal leading-[26px] text-[#B0B0B0] font-sans">
               Total nacional
             </h3>
@@ -135,14 +135,14 @@ export function MapaEmbalses() {
             <div className="text-[26px] font-semibold text-white">
               30,02%
             </div>
-            <div className="bg-neutral-700 text-center rounded gap-1 px-2 text-[#d1d1d0] text-[11px] font-medium flex h-6 self-center">
+            <div className="bg-neutral-700 text-center rounded-sm gap-1 px-2 text-[#d1d1d0] text-[11px] font-medium flex h-6 self-center">
               <MoveUp size={12} className='self-center'/>
               <div className='self-center'>
                 11.77%
               </div>
             </div>
             <HelpCircle
-              className="text-white cursor-pointer hover:text-gray-300 bg-neutral-700 self-center rounded h-6 w-6 p-1"
+              className="text-white cursor-pointer hover:text-gray-300 bg-neutral-700 self-center rounded-sm h-6 w-6 p-1"
               title="Ayuda"
             />
           </div>
@@ -160,7 +160,7 @@ export function MapaEmbalses() {
           >
             <span className="text-[20px] text-[#d1d1d0]">{e.region}:</span>
             <span className="font-semibold text-[20px]">{e.porcentaje.toFixed(2)}%</span>
-            <div className="bg-neutral-700 text-center rounded gap-1 px-2 text-[#d1d1d0] text-[11px] font-medium flex h-6 self-center">
+            <div className="bg-neutral-700 text-center rounded-sm gap-1 px-2 text-[#d1d1d0] text-[11px] font-medium flex h-6 self-center">
               <MoveUp size={12} className='self-center'/>
               <div className='self-center'>11.77%</div>
             </div>

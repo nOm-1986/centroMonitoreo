@@ -85,7 +85,7 @@ function Banner() {
         <h1 className='text-6xl font-semibold text-white mb-4'>
           Proyectos de Transmisión
         </h1>
-        <img src={GWOff} alt="GW Off" className="w-24 h-24 flex-shrink-0" />
+        <img src={GWOff} alt="GW Off" className="w-24 h-24 shrink-0" />
 
       </div>
 

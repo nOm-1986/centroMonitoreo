@@ -230,7 +230,7 @@ export function CapacidadInstalada() {
 
   if (loading) {
     return (
-      <div className="w-full bg-[#262626] p-4 rounded rounded-lg border-[#666666] shadow flex flex-col items-center justify-center h-64">
+      <div className="w-full bg-card p-4  rounded-lg border-border shadow-sm flex flex-col items-center justify-center h-64">
         <div className="flex space-x-2">
           <div className="w-3 h-3 rounded-full animate-bounce" style={{ backgroundColor: 'rgba(255,200,0,1)' }} />
           <div className="w-3 h-3 rounded-full animate-bounce" style={{ backgroundColor: 'rgba(255,200,0,1)', animationDelay: '0.2s' }} />
@@ -243,7 +243,7 @@ export function CapacidadInstalada() {
 
   if (error) {
     return (
-      <div className="w-full bg-[#262626] p-4 rounded-lg border border-[#666666] shadow flex flex-col items-center justify-center h-64">
+      <div className="w-full bg-card p-4 rounded-lg border border-border shadow-sm flex flex-col items-center justify-center h-64">
         <div className="text-red-400 mb-2">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M5.062 19h13.876c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.33 16c-.77 1.333.2 3 1.732 3z" />
@@ -261,10 +261,10 @@ export function CapacidadInstalada() {
 
   return (
     <section className="mt-8 mb-14">
-      <div className="w-full bg-[#262626] p-4 pb-10 rounded-lg border border-[#666666] shadow relative">
+      <div className="w-full bg-card p-4 pb-10 rounded-lg border border-[#666666] shadow-sm relative">
         {/* Ayuda */}
         <button
-          className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow hover:bg-[#666] transition-colors"
+          className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow-sm hover:bg-[#666] transition-colors"
           style={{ width: 30, height: 30 }}
           title="Ayuda"
           onClick={() => alert('Esta gráfica muestra la capacidad acumulada de los proyectos por tipo de energía a lo largo del tiempo.')}

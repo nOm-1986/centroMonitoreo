@@ -1,1 +1,1 @@
-export function CardPanel({ indicadores }) { return <div className='grid grid-cols-4 gap-4 mb-6'>{indicadores.map((i, idx) => <div key={idx} className='bg-gray-800 p-4 rounded'>{i.titulo}</div>)}</div>; }
+export function CardPanel({ indicadores }) { return <div className='grid grid-cols-4 gap-4 mb-6'>{indicadores.map((i, idx) => <div key={idx} className='bg-gray-800 p-4 rounded-sm'>{i.titulo}</div>)}</div>; }

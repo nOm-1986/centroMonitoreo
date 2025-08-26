@@ -145,7 +145,7 @@ export function GraficaDemanda({ fechaInicio = '2025-05-01', fechaFin = '2025-05
 
   if (loading) {
     return (
-      <div className="bg-[#262626] p-4 rounded border border-gray-700 shadow flex flex-col items-center justify-center h-64">
+      <div className="bg-[#262626] p-4 rounded-sm border border-gray-700 shadow-sm flex flex-col items-center justify-center h-64">
       <div className="flex space-x-2">
         <div
           className="w-3 h-3 rounded-full animate-bounce"
@@ -166,17 +166,17 @@ export function GraficaDemanda({ fechaInicio = '2025-05-01', fechaFin = '2025-05
   }
   if (error) {
     return (
-      <div className="bg-[#262626] p-4 rounded border border-gray-700 shadow">
+      <div className="bg-[#262626] p-4 rounded-sm border border-gray-700 shadow-sm">
         <p className="text-red-500">{error}</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-[#262626] p-4 rounded border border-gray-700 shadow relative">
+    <div className="bg-[#262626] p-4 rounded-sm border border-gray-700 shadow-sm relative">
       {/* Botón de ayuda */}
       <button
-        className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow hover:bg-[#666] transition-colors"
+        className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow-sm hover:bg-[#666] transition-colors"
         style={{ width: 30, height: 30 }}
         title="Ayuda"
         onClick={() => alert('Ok Aquí puedes mostrar ayuda contextual o abrir un modal.')}

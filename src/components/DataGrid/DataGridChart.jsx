@@ -9,7 +9,7 @@ const DataGridChart = ({ options, loading, error }) => {
   if (error) return <div className="text-center py-8 text-red-500">{error}</div>;
 
   return (
-    <div className="mt-6 bg-[#262626] p-4 rounded-lg shadow">
+    <div className="mt-6 bg-[#262626] p-4 rounded-lg shadow-sm">
       <HighchartsReact
         highcharts={Highcharts}
         options={{ ...highchartsTheme, ...options }}

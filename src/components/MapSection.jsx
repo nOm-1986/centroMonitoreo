@@ -1,1 +1,1 @@
-export function MapSection({ mapData }) { return <div className='bg-gray-800 h-96 rounded mb-6'>Mapa</div>; }
+export function MapSection({ mapData }) { return <div className='bg-gray-800 h-96 rounded-sm mb-6'>Mapa</div>; }

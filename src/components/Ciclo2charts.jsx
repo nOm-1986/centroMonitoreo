@@ -327,25 +327,25 @@ export default function Ciclo2Charts() {
   return (
     <div className="p-4 bg-[#262626] rounded-lg">
       {/* Distribución Proyectos por Departamento */}
-      <div className="w-full h-120 p-4 bg-[#262626] rounded shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-sm shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={proyectosDeptoC2Options} />
       </div>
       <hr className="border-t border-[#666666] my-6"/>
 
       {/* Proyectos por Estado */}
-      <div className="w-full h-120 p-4 bg-[#262626] rounded shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-sm shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={proyectosEstadoC2Options} />
       </div>
       <hr className="border-t border-[#666666] my-6"/>
 
       {/* Capacidad Instalada por Departamento */}
-      <div className="w-full h-120 p-4 bg-[#262626] rounded shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-sm shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={capacidadDeptoC2Options} />
       </div>
       <hr className="border-t border-[#666666] my-6"/>
 
       {/* Distribución de Capacidad por Estado */}
-      <div className="w-full h-120 p-4 bg-[#262626] rounded shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-sm shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={capacidadEstadoC2Options} />
       </div>
     </div>

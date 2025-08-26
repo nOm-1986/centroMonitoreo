@@ -205,7 +205,7 @@ export function EnergiaElectrica() {
 
   if (loading) {
     return (
-      <div className="w-full bg-[#262626] p-4 rounded border border-[#666666] shadow flex flex-col items-center justify-center h-64">
+      <div className="w-full bg-[#262626] p-4 rounded-sm border border-[#666666] shadow-sm flex flex-col items-center justify-center h-64">
         <div className="flex space-x-2">
           <div
             className="w-3 h-3 rounded-full animate-bounce"
@@ -226,7 +226,7 @@ export function EnergiaElectrica() {
   }
     if (error) {
     return (
-      <div className="bg-[#262626] p-4 rounded border border-gray-700 shadow flex flex-col items-center justify-center h-[500px]">
+      <div className="bg-[#262626] p-4 rounded-sm border border-gray-700 shadow-sm flex flex-col items-center justify-center h-[500px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-12 w-12 text-red-500 mb-4"
@@ -253,7 +253,7 @@ export function EnergiaElectrica() {
       {/* Filtro externo */}
       <div className="mb-4">
         <select
-          className="bg-[#262626] text-gray-200 p-2 rounded border border-[#666666] font-sans"
+          className="bg-[#262626] text-gray-200 p-2 rounded-sm border border-[#666666] font-sans"
           value={selected}
           onChange={e => setSelected(e.target.value)}
         >
@@ -276,7 +276,7 @@ export function EnergiaElectrica() {
           return (
             <div
               key={idx}
-              className="bg-[#262626] p-4 rounded border border-[#666666] shadow relative"
+              className="bg-[#262626] p-4 rounded-sm border border-[#666666] shadow-sm relative"
             >
             {/*   <button
                 className="absolute top-2 right-2 text-gray-300 hover:text-white"
@@ -286,7 +286,7 @@ export function EnergiaElectrica() {
 
               {/* Botón de ayuda */}
               <button
-                className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow hover:bg-[#666] transition-colors"
+                className="absolute top-[25px] right-[60px] z-10 flex items-center justify-center bg-[#444] rounded-lg shadow-sm hover:bg-[#666] transition-colors"
                 style={{ width: 30, height: 30 }}
                 title="Ayuda"
                 onClick={() => alert('Ok Aquí puedes mostrar ayuda contextual o abrir un modal.')}

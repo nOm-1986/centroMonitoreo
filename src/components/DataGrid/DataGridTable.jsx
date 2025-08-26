@@ -113,7 +113,7 @@ const DataGridTable = ({
   };
 
   if (loading) return (
-    <div className="bg-[#262626] p-6 rounded-lg shadow flex flex-col items-center justify-center h-64">
+    <div className="bg-[#262626] p-6 rounded-lg shadow-sm flex flex-col items-center justify-center h-64">
       <div className="flex space-x-2">
         <div className="w-3 h-3 rounded-full animate-bounce bg-yellow-400" style={{ animationDelay: '0s' }} />
         <div className="w-3 h-3 rounded-full animate-bounce bg-yellow-400" style={{ animationDelay: '0.2s' }} />
@@ -124,7 +124,7 @@ const DataGridTable = ({
   );
 
   if (error) return (
-    <div className="bg-[#262626] p-6 rounded-lg shadow flex flex-col items-center justify-center h-64">
+    <div className="bg-[#262626] p-6 rounded-lg shadow-sm flex flex-col items-center justify-center h-64">
       <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-red-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
@@ -174,7 +174,7 @@ const DataGridTable = ({
             }}
           />
           {openFilter === col.selector && (
-            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded shadow z-50">
+            <div className="absolute bg-[#1f1f1f] p-2 mt-1 rounded-sm shadow-sm z-50">
               <input
                 type="text"
                 placeholder="Buscar..."
@@ -246,17 +246,17 @@ const DataGridTable = ({
     : processedColumns;
 
   return (
-    <div className="bg-[#262626] p-4 rounded-lg shadow">
+    <div className="bg-[#262626] p-4 rounded-lg shadow-sm">
       <div className="flex items-center justify-between mb-4">
         <input
           type="text"
           placeholder="Buscar..."
           value={globalFilter}
           onChange={(e) => setGlobalFilter(e.target.value)}
-          className="bg-[#1f1f1f] placeholder-gray-500 text-white rounded p-2 w-1/3 focus:outline-none focus:ring-1 focus:ring-yellow-400"
+          className="bg-[#1f1f1f] placeholder-gray-500 text-white rounded-sm p-2 w-1/3 focus:outline-hidden focus:ring-1 focus:ring-yellow-400"
         />
         <button
-          className="flex items-center gap-1 bg-yellow-400 text-gray-800 px-3 py-1 rounded hover:bg-yellow-500 transition-colors"
+          className="flex items-center gap-1 bg-yellow-400 text-gray-800 px-3 py-1 rounded-sm hover:bg-yellow-500 transition-colors"
           onClick={() => onExport(filteredData)}
         >
           <Download size={16} /> Exportar CSV

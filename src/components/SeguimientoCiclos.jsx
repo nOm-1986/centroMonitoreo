@@ -744,16 +744,16 @@ const getChartOptions = (serie, index) => ({
 export function GraficaCiclo1() {
   return (
     <div className="grid md:grid-cols-2 gap-4 ">
-      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={proyectosEstadoOptions} />
       </div>
-      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={capacidadEstadoOptions} />
       </div>
-      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={proyectosDeptoOptions} />
       </div>
-      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={capacidadDeptoOptions} />
       </div>
     </div>
@@ -763,16 +763,16 @@ export function GraficaCiclo1() {
 export function GraficaCiclo2() {
   return (
     <div className="grid md:grid-cols-2 gap-4">
-      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={proyectosEstadoC2Options} />
       </div>
-      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={capacidadEstadoC2Options} />
       </div>
-      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={proyectosDeptoC2Options} />
       </div>
-      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow border border-[#666666] overflow-hidden">
+      <div className="w-full h-120 p-4 bg-[#262626] rounded-lg shadow-sm border border-[#666666] overflow-hidden">
         <HighchartsReact highcharts={Highcharts} options={capacidadDeptoC2Options} />
       </div>
     </div>
