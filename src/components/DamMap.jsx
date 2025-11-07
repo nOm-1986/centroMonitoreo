@@ -178,7 +178,7 @@ const RegionDialog = ({ coords, damProperties }) => {
               <span className="block text-sm text-white">
                 Aportes hídricos:
               </span>
-              <span className="font-bold text-sm">{embalse_aportes_hidricos}</span>
+              <span className="font-bold text-sm">{embalse_aportes_string} GWh-día -- {embalse_aportes_hidricos}</span>
             </div>
           </div>
           <div className="w-full">
